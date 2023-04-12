@@ -5,43 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Frontend Mentor - Challenges</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-  <header>
-    <section class="cont-regional bg--dark">
-      <p class="txt--white legal">Grandes ofertas en comederos</p>
-      <div class="regional">
-        <form action="#">
-          <select class="select-transparent txt--lightgray legal" name="language" id="lang">
-            <option value="spanish">Español</option>
-            <option value="english">Ingles</option>
-          </select>
-        </form>
-        <form action="#">
-          <select class="select-transparent txt--lightgray legal" name="money" id="money">
-            <option value="cop">COP$</option>
-            <option value="arg">ARG$</option>
-          </select>
-        </form>
-      </div>
-    </section>
-    <nav class="bg--yellow p--15">
-      <img class="logo" src="./img/img_logo.png" alt="logo">
-      <ul>
-        <li><a href="" class="txt--white"><i class="fa-solid fa-paw"></i></i>Categorías</a></li>
-        <li><a href="" class="txt--white"><i class="fa-solid fa-paw"></i></i>Pets</a></li>
-        <li><a href="" class="txt--white"><i class="fa-solid fa-paw"></i></i>Nosotros</a></li>
-        <li><a href="" class="txt--white"><i class="fa-solid fa-paw"></i></i>Contactanos</a></li>
-      </ul>
-      <div class="menu-mobile"></div>
-    </nav>
-    <section class="banner">
-      <div class="banner-title p--15">
-        <h2 class="bg--white txt--center txt--darkbrown title br--5 mb--15 p--15">¡Es un placer tenerte aquí!</h2>
-        <p class="txt--darkbrown mb--15">¡Comederos en descuento!</p>
-        <p class="bg--yellow txt--uppercase txt--white br--5 p--15">COMEDEROS</p>
-      </div>
-    </section>
-  </header>
+  <nav class="d-flex p--15">
+    <a href="https://jhonatanrios.github.io" class="d-grid center">Volver al portafolio <i class="fa-solid fa-circle-chevron-left"></i></a>
+  </nav>
+  <main class="cont-wrap">
+    <header class="p--15">
+      <h1 class="txt--center">Frontend Mentor - Challenges</h1>
+    </header>
+    <legend class="txt--center mb--15">Elige tu género musical favorito:</legend>
+    <form id="filtros"></form>
+    <div class="cont-card" id="cards"></div>
+  </main>
+  <script src="./js/script.js"></script>
 </body>
 </html>

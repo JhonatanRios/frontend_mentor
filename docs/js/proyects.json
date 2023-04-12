@@ -1,8 +1,8 @@
 [
   {
     "built": ["html", "sass"],
-    "level":"newbie",
-    "nomProyect":"qr-code-main",
+    "level": "newbie",
+    "nomProyect": "qr-code-main",
     "thumbnail": "../newbie/qr-code-component-main/thumbnail.png"
   }
 ]

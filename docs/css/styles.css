@@ -1,0 +1,142 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  color: rgb(28, 32, 50);
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  justify-content: flex-end;
+  top: 0;
+}
+nav a {
+  grid-template-columns: auto auto;
+  gap: 0 10px;
+}
+
+.cont-wrap {
+  width: 80%;
+  margin: 50px auto 0;
+}
+
+.d-flex {
+  display: flex;
+}
+.d-grid {
+  display: grid;
+}
+
+.center {
+  place-items: center;
+}
+
+#items {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 0 auto;
+}
+#items input {
+  display: none;
+}
+
+.txt--gray {
+  color: #8d8d8d;
+}
+.txt--center {
+  text-align: center;
+}
+
+.mb--15 {
+  margin: 0 0 15px;
+}
+
+.p--15 {
+  padding: 15px;
+}
+
+@media (min-width: 600px) {
+  .cont-wrap {
+    width: 1024px;
+    margin: 30px auto 0;
+  }
+}
+input + label {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 3;
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: 0.3s background-color ease;
+  padding: 15px;
+  font-weight: 400;
+  box-sizing: border-box;
+  opacity: 0.6;
+}
+input + label:hover {
+  opacity: 1;
+  font-weight: 700;
+}
+input + label:hover:nth-child(4) {
+  color: #6abecd;
+}
+input + label:hover:nth-child(6) {
+  color: #aad742;
+}
+input + label:hover:nth-child(8) {
+  color: #f1b604;
+}
+input + label:hover:nth-child(10) {
+  color: #f48925;
+}
+input + label:hover:nth-child(12) {
+  color: #ed2c49;
+}
+
+input:checked + label {
+  cursor: default;
+  z-index: 3;
+  opacity: 1;
+  font-weight: 700;
+}
+input:checked + label:nth-child(4) {
+  color: #6abecd;
+}
+input:checked + label:nth-child(6) {
+  color: #aad742;
+}
+input:checked + label:nth-child(8) {
+  color: #f1b604;
+}
+input:checked + label:nth-child(10) {
+  color: #f48925;
+}
+input:checked + label:nth-child(12) {
+  color: #ed2c49;
+}
+
+/* Animación de los nav (nav visible), agregar dependiendo el # te navs */
+input:checked:nth-of-type(1) ~ input_info:nth-of-type(1), input:checked:nth-of-type(2) ~ input_info:nth-of-type(2) {
+  opacity: 1;
+  transition: 0.5s opacity ease-in, 0.8s transform ease;
+  position: relative;
+  z-index: 2;
+  transform: translateY(0px);
+  top: -2px;
+}/*# sourceMappingURL=styles.css.map */
