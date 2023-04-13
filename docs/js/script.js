@@ -91,6 +91,18 @@ async function createCards() {
 
     const level = document.createElement('p');
     level.textContent = item.level;
+    if (item.level === "newbie") {
+      level.style.color = "#6abecd";
+    } else if (item.level === "junior") {
+      level.style.color = "#aad742";
+    } else if (item.level === "intermediate") {
+      level.style.color = "#f1b604";
+    } else if (item.level === "advanced") {
+      level.style.color = "#f48925";
+    } else if (item.level === "guru") {
+      level.style.color = "#ed2c49";
+    }
+    console.log(level.textContent);
 
     const builtWith = document.createElement('p');
     builtWith.textContent = `${item.built.join(', ')}`;
