@@ -76,7 +76,7 @@ nav {
           height: 100%;
           grid-template-rows: 1fr auto auto;
           place-items: center;
-          background: rgba(255, 255, 255, 0.2);
+          background: rgba(255, 255, 255, .8);
           *:nth-child(2) {
             text-transform: uppercase;
           }
