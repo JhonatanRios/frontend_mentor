@@ -21,8 +21,9 @@ nav {
   justify-content: flex-end;
   top: 0;
   a {
-    grid-template-columns: auto auto;
-    gap: 0 10px;
+    p {
+      display: none;
+    }
   }
 }
 
@@ -47,12 +48,13 @@ nav {
       img {
         width: 256px;
         height: auto;
+        //background: #8d8d8d
       }
       .info {
         @extend .p--15, .d-grid;
         background: #fff;
-        *:nth-child(3) {
-          text-align: right;
+        h2 {
+          text-align: center;
         }
         p {
           display: none;
@@ -69,9 +71,17 @@ nav {
         }
         .info {
           position: relative;
-          background: transparent;
+          width: 100%;
+          height: 100%;
+          grid-template-rows: 1fr auto auto;
+          place-items: center;
+          background: rgba(255, 255, 255, 0.2);
+          *:nth-child(2) {
+            text-transform: uppercase;
+          }
           p {
             display: inline-block;
+            text-transform: capitalize;
           }
         }
       }
@@ -131,6 +141,15 @@ nav {
     &-wrap{
       width: 1024px;
       margin: 30px auto 0;
+    }
+  }
+  nav {
+    a {
+      grid-template-columns: auto auto;
+      gap: 0 10px;
+      p {
+        display: block;
+      }
     }
   }
 }

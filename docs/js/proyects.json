@@ -1,13 +1,13 @@
 [
   {
-    "built": ["HTML", "CSS"],
+    "built": ["html", "css"],
     "level": "newbie",
-    "nomProyecto": "qr-code-component-main",
+    "nomProyecto": "QR code component",
     "thumbnail": "/frontend_mentor/newbie/qr-code-component-main/thumbnail.png",
     "url": "/frontend_mentor/newbie/qr-code-component-main"
   },
   {
-    "built": ["HTML", "CSS"],
+    "built": ["html", "css"],
     "level": "junior",
     "nomProyecto": "Otro Proyecto Increíble",
     "thumbnail": "/frontend_mentor/newbie/qr-code-component-main/thumbnail.png",

@@ -23,9 +23,8 @@ nav {
   justify-content: flex-end;
   top: 0;
 }
-nav a {
-  grid-template-columns: auto auto;
-  gap: 0 10px;
+nav a p {
+  display: none;
 }
 
 .cont-wrap {
@@ -53,8 +52,8 @@ nav a {
 .cont-cards .card .info {
   background: #fff;
 }
-.cont-cards .card .info *:nth-child(3) {
-  text-align: right;
+.cont-cards .card .info h2 {
+  text-align: center;
 }
 .cont-cards .card .info p {
   display: none;
@@ -71,10 +70,18 @@ nav a {
 }
 .cont-cards .card:hover .info {
   position: relative;
-  background: transparent;
+  width: 100%;
+  height: 100%;
+  grid-template-rows: 1fr auto auto;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.2);
+}
+.cont-cards .card:hover .info *:nth-child(2) {
+  text-transform: uppercase;
 }
 .cont-cards .card:hover .info p {
   display: inline-block;
+  text-transform: capitalize;
 }
 
 .d-flex {
@@ -120,6 +127,13 @@ nav a {
   .cont-wrap {
     width: 1024px;
     margin: 30px auto 0;
+  }
+  nav a {
+    grid-template-columns: auto auto;
+    gap: 0 10px;
+  }
+  nav a p {
+    display: block;
   }
 }
 input + label {
