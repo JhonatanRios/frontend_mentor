@@ -11,6 +11,12 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 nav {
   position: fixed;
   width: 100%;
@@ -35,19 +41,40 @@ nav a {
 .cont-cards .card {
   flex: 1 1 256px; /*  Stretching: */
   flex: 0 1 256px; /*  No stretching: */
-  gap: 10px 0;
+  height: 256px;
   border-radius: 20px;
-}
-.cont-cards .card *:nth-child(4) {
-  text-align: right;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 .cont-cards .card img {
-  width: 100%;
+  width: 256px;
   height: auto;
 }
+.cont-cards .card .info {
+  background: #fff;
+}
+.cont-cards .card .info *:nth-child(3) {
+  text-align: right;
+}
+.cont-cards .card .info p {
+  display: none;
+}
 .cont-cards .card:hover {
+  position: relative;
+  place-items: center;
   box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
-  transform: scale(1.1, 1.1);
+}
+.cont-cards .card:hover img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.cont-cards .card:hover .info {
+  position: relative;
+  background: transparent;
+}
+.cont-cards .card:hover .info p {
+  display: inline-block;
 }
 
 .d-flex {
