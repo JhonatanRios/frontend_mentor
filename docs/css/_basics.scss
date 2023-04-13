@@ -27,12 +27,14 @@ nav {
     margin: 50px auto 0;
   }
   &-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
     .card {
       @extend .d-grid;
-      grid-template-rows: auto auto 1fr auto;
+      flex: 1 1 256px; /*  Stretching: */
+      flex: 0 1 256px; /*  No stretching: */
       gap: 10px 0;
       border-radius: 20px;
       *:nth-child(4) {
