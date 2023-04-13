@@ -3,14 +3,14 @@
     "built": ["HTML", "CSS"],
     "level": "newbie",
     "nomProyecto": "qr-code-component-main",
-    "thumbnail": "../newbie/qr-code-component-main/thumbnail.jpg",
-    "url": "/newbie/qr-code-component-main"
+    "thumbnail": "../../newbie/qr-code-component-main/thumbnail.png",
+    "url": "/frontend_mentor/newbie/qr-code-component-main"
   },
   {
     "built": ["HTML", "CSS"],
     "level": "junior",
     "nomProyecto": "Otro Proyecto Increíble",
-    "thumbnail": "../newbie/qr-code-component-main/thumbnail.jpg",
-    "url": "/newbie/qr-code-component-main"
+    "thumbnail": "../../newbie/qr-code-component-main/thumbnail.png",
+    "url": "/frontend_mentor/newbie/qr-code-component-main"
   }
 ]
