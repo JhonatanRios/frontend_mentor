@@ -1,8 +1,16 @@
 [
   {
-    "built": ["html", "sass"],
+    "built": ["HTML", "CSS"],
     "level": "newbie",
-    "nomProyect": "qr-code-main",
-    "thumbnail": "../newbie/qr-code-component-main/thumbnail.png"
+    "nomProyecto": "qr-code-component-main",
+    "thumbnail": "../newbie/qr-code-component-main/thumbnail.jpg",
+    "url": "../newbie/qr-code-component-main"
+  },
+  {
+    "built": ["HTML", "CSS"],
+    "level": "junior",
+    "nomProyecto": "Otro Proyecto Increíble",
+    "thumbnail": "../newbie/qr-code-component-main/thumbnail.jpg",
+    "url": "../newbie/qr-code-component-main"
   }
 ]

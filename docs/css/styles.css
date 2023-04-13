@@ -26,11 +26,32 @@ nav a {
   width: 80%;
   margin: 50px auto 0;
 }
+.cont-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+.cont-cards .card {
+  grid-template-rows: auto auto 1fr auto;
+  gap: 10px 0;
+  border-radius: 20px;
+}
+.cont-cards .card *:nth-child(4) {
+  text-align: right;
+}
+.cont-cards .card img {
+  width: 100%;
+  height: auto;
+}
+.cont-cards .card:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1, 1.1);
+}
 
 .d-flex {
   display: flex;
 }
-.d-grid {
+.d-grid, .cont-cards .card, .cont-cards .card .info {
   display: grid;
 }
 
@@ -62,11 +83,11 @@ nav a {
   margin: 0 0 15px;
 }
 
-.p--15 {
+.p--15, .cont-cards .card .info {
   padding: 15px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 1024px) {
   .cont-wrap {
     width: 1024px;
     margin: 30px auto 0;
@@ -88,6 +109,7 @@ input + label {
   font-weight: 400;
   box-sizing: border-box;
   opacity: 0.6;
+  text-transform: capitalize;
 }
 input + label:hover {
   opacity: 1;

@@ -12,6 +12,7 @@ input + label {
   font-weight: 400;
   box-sizing: border-box;
   opacity: .6;
+  text-transform: capitalize;
   &:hover {
     opacity: 1;
     font-weight: 700;
