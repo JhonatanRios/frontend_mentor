@@ -5,7 +5,6 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
-  font-size: 16;
   color: rgb(28, 32, 50);
 }
 
@@ -16,6 +15,10 @@ a {
 img {
   display: block;
   object-fit: cover;
+}
+
+p {
+  font-size: 16px;
 }
 
 nav {
