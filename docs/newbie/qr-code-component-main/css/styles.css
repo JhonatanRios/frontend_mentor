@@ -25,6 +25,11 @@ a {
   text-decoration: none;
 }
 
+p {
+  font-size: 15px;
+  color: hsl(218, 44%, 22%);
+}
+
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -59,7 +64,6 @@ nav a p {
   border-radius: 10px;
 }
 .card p {
-  font-size: 15px;
   color: hsl(220, 15%, 55%);
 }
 
@@ -76,9 +80,6 @@ nav a p {
 }
 
 @media (min-width: 375px) {
-  body {
-    height: 100vh;
-  }
   .card {
     width: 300px;
     margin: 25px;

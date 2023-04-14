@@ -30,6 +30,11 @@ a {
   text-decoration: none;
 }
 
+p {
+  font-size: 15px;
+  color: $dark-blue;
+}
+
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -65,7 +70,6 @@ nav {
     border-radius: 10px;
   }
   p {
-    font-size: 15px;
     color: $grayish-blue;
   }
 }
@@ -83,9 +87,6 @@ nav {
 }
 
 @media (min-width: 375px) {
-  body {
-    height: 100vh;
-  }
   .card {
     width: 300px;
     margin: 25px;
