@@ -32,6 +32,7 @@ input + label {
     }
   }
 }
+
 input:checked + label {
   cursor: default;
   z-index: 3;
@@ -52,16 +53,4 @@ input:checked + label {
   &:nth-child(12) {
     color: #ed2c49;
   }
-}
-
-/* Animación de los nav (nav visible), agregar dependiendo el # te navs */
-input:checked:nth-of-type(1) ~ input_info:nth-of-type(1), input:checked:nth-of-type(2) ~ input_info:nth-of-type(2) {
-  opacity: 1;
-  transition: 0.5s opacity ease-in, 0.8s -webkit-transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease;
-  transition: 0.5s opacity ease-in, 0.8s transform ease, 0.8s -webkit-transform ease;
-  position: relative;
-  z-index: 2;
-  transform: translateY(0px);
-  top: -2px;
 }

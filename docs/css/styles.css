@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -199,14 +199,4 @@ input:checked + label:nth-child(10) {
 }
 input:checked + label:nth-child(12) {
   color: #ed2c49;
-}
-
-/* Animación de los nav (nav visible), agregar dependiendo el # te navs */
-input:checked:nth-of-type(1) ~ input_info:nth-of-type(1), input:checked:nth-of-type(2) ~ input_info:nth-of-type(2) {
-  opacity: 1;
-  transition: 0.5s opacity ease-in, 0.8s transform ease;
-  position: relative;
-  z-index: 2;
-  transform: translateY(0px);
-  top: -2px;
 }/*# sourceMappingURL=styles.css.map */
