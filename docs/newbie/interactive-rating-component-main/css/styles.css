@@ -12,7 +12,6 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Overpass", sans-serif;
-  color: hsl(213, 20%, 18%);
 }
 
 img {
@@ -110,6 +109,15 @@ input:checked + label {
 
 #cardThanks {
   display: none;
+}
+
+#answer {
+  padding: 8px 15px;
+  border-radius: 50px;
+  background: rgba(149, 158, 172, 0.2);
+}
+#answer p {
+  color: hsl(25, 97%, 53%);
 }
 
 .d-grid {

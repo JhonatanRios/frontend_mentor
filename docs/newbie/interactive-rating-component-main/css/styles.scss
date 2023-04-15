@@ -20,7 +20,6 @@ $orange: hsl(25, 97%, 53%);
   margin: 0;
   box-sizing: border-box;
   font-family: 'Overpass', sans-serif;
-  color: $dark-blue;
 }
 
 img {
@@ -121,9 +120,14 @@ input:checked + label {
   display: none;
 }
 
-// #answer {
-
-// }
+#answer {
+  padding: 8px 15px;
+  border-radius: 50px;
+  background: rgba($light-gray, .2);
+  p {
+    color: $orange;
+  }
+}
 
 .d-grid {
   display: grid;
