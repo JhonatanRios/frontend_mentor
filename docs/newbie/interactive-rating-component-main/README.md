@@ -23,7 +23,7 @@ Users should be able to:
 - See the "Thank you" card state after submitting a rating
 
 ### Screenshot
-![](https://github.com/JhonatanRios/frontend_mentor/blob/main/docs/newbie/qr-code-component-main/images/screencapture-solution.png)
+![](https://github.com/JhonatanRios/frontend_mentor/blob/main/docs/newbie/interactive-rating-component-main/images/screencapture-solution.png)
 
 ### Links
 - Solution URL: [github.com/JhonatanRios/frontend_mentor/interactive-rating-component-main](https://github.com/JhonatanRios/frontend_mentor/tree/main/docs/newbie/interactive-rating-component-main)
