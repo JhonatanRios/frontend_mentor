@@ -24,10 +24,6 @@ a {
   text-decoration: none;
 }
 
-p {
-  font-size: 15px;
-}
-
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -126,6 +122,10 @@ input:checked + label {
 
 .center {
   place-items: center;
+}
+
+p {
+  font-size: 15px;
 }
 
 .mb--15 {

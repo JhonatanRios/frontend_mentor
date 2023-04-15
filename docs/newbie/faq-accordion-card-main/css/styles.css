@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -11,8 +10,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Lato", sans-serif;
-  color: hsl(218, 44%, 22%);
+  font-family: "Overpass", sans-serif;
 }
 
 img {
@@ -23,14 +21,6 @@ img {
 
 a {
   text-decoration: none;
-}
-
-body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  place-items: center;
-  background: hsl(212, 45%, 89%);
-  text-align: center;
 }
 
 nav {
@@ -50,25 +40,22 @@ nav a p {
   gap: 15px 0;
   border-radius: 20px;
   overflow: hidden;
-  background: hsl(0, 0%, 100%);
-  box-shadow: 0px 10px 10px 0px rgba(123, 135, 157, 0.75);
 }
 .card img {
   width: 100%;
   height: auto;
   border-radius: 10px;
 }
-.card p {
-  color: hsl(220, 15%, 55%);
-}
-
 .d-grid {
   display: grid;
 }
 
+.center {
+  place-items: center;
+}
+
 p {
   font-size: 15px;
-  color: hsl(218, 44%, 22%);
 }
 
 .mb--15 {
@@ -79,18 +66,6 @@ p {
   padding: 15px;
 }
 
-@media (min-width: 375px) {
-  .card {
-    width: 300px;
-    margin: 25px;
-  }
-}
-@media (min-width: 1024px) {
-  nav a {
-    grid-template-columns: auto auto;
-    gap: 0 10px;
-  }
-  nav a p {
-    display: block;
-  }
+.txt--center {
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,85 @@
+$very-dark-desaturated-blue: hsl(238, 29%, 16%);
+$soft-red: hsl(14, 88%, 65%);
+$soft-violet: hsl(273, 75%, 66%);
+$soft-blue: hsl(240, 73%, 65%);
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Overpass', sans-serif;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  top: 0;
+  a {
+    p {
+      display: none;
+    }
+  }
+}
+
+.card {
+  position: relative;
+  width: 90%;
+  place-items: center;
+  gap: 15px 0;
+  border-radius: 20px;
+  overflow: hidden;
+  //background: $white;
+  //box-shadow: 0px 10px 10px 0px rgba($grayish-blue, .75);
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  p {
+    //color: $grayish-blue;
+  }
+}
+
+.d-grid {
+  display: grid;
+}
+
+.center {
+  place-items: center;
+}
+
+p {
+  font-size: 15px;
+}
+
+.mb--15 {
+  margin: 0 0 15px;
+}
+
+.p--15 {
+  padding: 15px;
+}
+
+.txt {
+  &--center {
+    text-align: center;
+  }
+}
