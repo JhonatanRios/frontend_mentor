@@ -12,4 +12,4 @@ function califica(event) {
 
 rating.addEventListener('submit', califica);
 
-You selected <!-- Add rating here --> out of 5
+// You selected <!-- Add rating here --> out of 5
