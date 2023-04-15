@@ -12,7 +12,7 @@ function califica(event) {
 
   textAnswer.textContent = `You selected ${selectOption} out of 5`;
   answer.appendChild(textAnswer);
-  console.log(answer); // Muestra el valor seleccionado en la consola
+  //console.log(answer); // Muestra el valor seleccionado en la consola
 }
 
 rating.addEventListener('submit', califica);
