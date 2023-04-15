@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+  color: hsl(213, 20%, 18%);
+}
+
+img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 15px;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  place-items: center;
+  background: hsl(216, 12%, 8%);
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  top: 0;
+}
+nav a p {
+  display: none;
+}
+
+.card {
+  position: relative;
+  width: 90%;
+  gap: 15px 0;
+  gap: 15px 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(hsl(213, 20%, 18%) 0, hsl(210, 28%, 13%));
+}
+.card .icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(124, 135, 152, 0.2);
+}
+.card .icon img {
+  width: 18px;
+  height: 18px;
+}
+.card form {
+  gap: 15px 0;
+}
+.card form .cont-rating {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 15px;
+}
+.card form input {
+  display: none;
+}
+.card form #submit {
+  width: 100%;
+  height: 40px;
+  border-radius: 50px;
+  background: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 900;
+}
+.card form #submit:hover {
+  background: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+
+input + label {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(124, 135, 152, 0.2);
+  opacity: 0.5;
+}
+input + label:hover {
+  background: rgba(124, 135, 152, 0.8);
+  opacity: 1;
+}
+
+input:checked + label {
+  background: hsl(25, 97%, 53%);
+  opacity: 1;
+}
+
+#cardThanks {
+  display: none;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.center {
+  place-items: center;
+}
+
+.mb--15 {
+  margin: 0 0 15px;
+}
+
+.p--15 {
+  padding: 15px;
+}
+
+.txt--light-gray {
+  color: hsl(217, 12%, 63%);
+}
+.txt--white {
+  color: hsl(0, 0%, 100%);
+}
+.txt--center {
+  text-align: center;
+}
+
+@media (min-width: 450px) {
+  .card {
+    width: 400px;
+    margin: 25px;
+  }
+}
+@media (min-width: 1024px) {
+  nav a {
+    grid-template-columns: auto auto;
+    gap: 0 10px;
+  }
+  nav a p {
+    display: block;
+  }
+}/*# sourceMappingURL=styles.css.map */
