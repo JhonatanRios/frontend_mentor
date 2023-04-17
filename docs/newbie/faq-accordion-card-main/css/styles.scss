@@ -2,20 +2,27 @@ $very-dark-desaturated-blue: hsl(238, 29%, 16%);
 $soft-red: hsl(14, 88%, 65%);
 $soft-violet: hsl(273, 75%, 66%);
 $soft-blue: hsl(240, 73%, 65%);
+$white: #fff;
+$very-dark-grayish-blue: hsl(237, 12%, 33%);
+$dark-grayish-blue: hsl(240, 6%, 90%);
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
 .attribution {
   font-size: 11px;
   text-align: center;
-  a {
-    color: hsl(228, 45%, 44%);
-  }
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Overpass', sans-serif;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, $soft-violet 0, $soft-blue 100%) no-repeat;
 }
 
 img {
@@ -39,22 +46,111 @@ nav {
   }
 }
 
-.card {
-  position: relative;
-  width: 90%;
-  place-items: center;
-  gap: 15px 0;
-  border-radius: 20px;
-  overflow: hidden;
-  //background: $white;
-  //box-shadow: 0px 10px 10px 0px rgba($grayish-blue, .75);
+.imgAbsolute {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  z-index: 3;
   img {
     width: 100%;
     height: auto;
-    border-radius: 10px;
   }
-  p {
-    //color: $grayish-blue;
+}
+
+.card {
+  position: relative;
+  width: 80%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+  margin: 0;
+  padding: 25px;
+  border-radius: 20px;
+  background: $white;
+  box-shadow: 0px 10px 10px 0px rgba($very-dark-desaturated-blue, .75);
+  overflow: hidden;
+  &::after {
+    content: '';
+    width: 300px;
+    height: 100%;
+    position: absolute;
+    display: block;
+    background: url('../images/bg-pattern-mobile.svg') no-repeat center;
+    background-size: contain;
+    left: 0;
+    top: 0;
+  }
+  & * {
+    z-index: 2;
+  }
+  .image {
+    width: 100%;
+    img {
+      position: absolute;
+      left: -10%;
+    }
+  }
+  .faq {
+    h1 {
+      font-size: 40px;
+      font-weight: 700;
+    }
+  }
+}
+
+.tabs {
+  .tab {
+    width: 100%;
+    color: $very-dark-grayish-blue;
+    overflow: hidden;
+    border-bottom: 1px solid $dark-grayish-blue;
+    &-label {
+      display: flex;
+      justify-content: space-between;
+      padding: 1em 0;
+      font-weight: 700;
+      cursor: pointer;
+      &:hover {
+        color: $soft-red;
+      }
+      &::after {
+        content: '';
+        width: 1em;
+        height: 1em;
+        background: url('../images/icon-arrow-down.svg') no-repeat center;
+        text-align: center;
+        transition: all .35s;
+      }
+    }
+    &-content {
+      max-height: 0;
+      padding: 0 1em;
+      background: white;
+      transition: all .35s;
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+// :checked
+input:checked {
+  + .tab-label {
+    color: $soft-red;
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+  ~ .tab-content {
+    max-height: 100vh;
+    padding: 0 0 10px;
   }
 }
 
@@ -79,7 +175,45 @@ p {
 }
 
 .txt {
+  &--darkgray {
+    color: $very-dark-grayish-blue;
+  }
+  &--white {
+    color: $white;
+  }
   &--center {
     text-align: center;
+  }
+}
+
+@media (min-width: 850px) {
+  .card {
+    width: 800px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 35px;
+    margin: 25px auto;
+    &::after {
+      width: 50%;
+      height: 140%;
+      background: url('../images/bg-pattern-desktop.svg') no-repeat right;
+      background-size: cover;
+      top: -20%;
+    }
+    .faq {
+      margin: 25px 0;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  nav {
+    a {
+      grid-template-columns: auto auto;
+      gap: 0 10px;
+      p {
+        display: block;
+      }
+    }
   }
 }
