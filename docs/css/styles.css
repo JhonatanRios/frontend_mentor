@@ -30,6 +30,9 @@ nav {
 nav a p {
   display: none;
 }
+nav a i {
+  font-size: 25px;
+}
 
 .cont-wrap {
   width: 80%;
