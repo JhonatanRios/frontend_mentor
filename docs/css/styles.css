@@ -146,6 +146,7 @@ nav a i {
   }
   nav a p {
     display: block;
+    margin: 3px 0 0;
   }
 }
 input + label {

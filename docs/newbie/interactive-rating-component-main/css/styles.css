@@ -162,5 +162,6 @@ p {
   }
   nav a p {
     display: block;
+    margin: 3px 0 0;
   }
 }/*# sourceMappingURL=styles.css.map */
