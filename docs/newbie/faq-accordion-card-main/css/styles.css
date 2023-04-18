@@ -36,17 +36,6 @@ nav a p {
   display: none;
 }
 
-.imgAbsolute {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-  z-index: 3;
-}
-.imgAbsolute img {
-  width: 100%;
-  height: auto;
-}
-
 .card {
   position: relative;
   width: 80%;
@@ -54,17 +43,15 @@ nav a p {
   grid-template-rows: 1fr 1fr;
   gap: 15px;
   margin: 0;
-  padding: 25px;
   border-radius: 20px;
   background: #fff;
   box-shadow: 0px 10px 10px 0px rgba(29, 30, 53, 0.75);
-  overflow: hidden;
 }
 .card::after {
   content: "";
+  position: absolute;
   width: 300px;
   height: 100%;
-  position: absolute;
   display: block;
   background: url("../images/bg-pattern-mobile.svg") no-repeat center;
   background-size: contain;
@@ -75,15 +62,31 @@ nav a p {
   z-index: 2;
 }
 .card .image {
+  position: relative;
   width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 .card .image img {
   position: absolute;
-  left: -10%;
+  right: 0;
+}
+.card .faq {
+  padding: 25px;
 }
 .card .faq h1 {
   font-size: 40px;
   font-weight: 700;
+}
+
+#box {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  z-index: 3;
+  left: -60px;
+  bottom: 80px;
+  transition: all 1s ease-in-out;
 }
 
 .tabs .tab {
@@ -172,12 +175,11 @@ p {
     width: 800px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    gap: 35px;
     margin: 25px auto;
   }
   .card::after {
     width: 50%;
-    height: 140%;
+    height: 130%;
     background: url("../images/bg-pattern-desktop.svg") no-repeat right;
     background-size: cover;
     top: -20%;
