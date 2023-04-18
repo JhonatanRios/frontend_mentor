@@ -49,7 +49,7 @@ nav a p {
   overflow: hidden;
 }
 .cont-cards .card img {
-  width: 256px;
+  width: 100%;
   height: auto;
 }
 .cont-cards .card .info {

@@ -43,6 +43,9 @@ nav {
     p {
       display: none;
     }
+    i {
+      font-size: 25px;
+    }
   }
 }
 
@@ -50,17 +53,17 @@ nav {
   position: relative;
   width: 80%;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr auto;
   gap: 15px;
-  margin: 0;
+  margin: 100px 0 15px;
   border-radius: 20px;
   background: $white;
-  box-shadow: 0px 10px 10px 0px rgba($very-dark-desaturated-blue, .75);
+  box-shadow: 0px 10px 10px 0px rgba($very-dark-desaturated-blue, .5);
   &::after {
     content: '';
     position: absolute;
     width: 100%;
-    height: 104px;
+    height: 80px;
     display: block;
     background: url('../images/bg-pattern-mobile.svg') no-repeat center;
     background-size: contain;
@@ -71,18 +74,18 @@ nav {
     z-index: 2;
   }
   .image {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    position: absolute;
+    top: -100px;
     img {
       position: relative;
-      right: 0;
+      width: 190px;
+      height: auto;
     }
   }
   .faq {
-    padding: 25px;
+    padding: 80px 25px 25px;
     h1 {
+      text-align: center;
       font-size: 40px;
       font-weight: 700;
     }
@@ -203,23 +206,28 @@ p {
       width: 100%;
       height: 100%;
       overflow: hidden;
+      top: 0;
       img {
         position: absolute;
+        width: auto;
         right: 0;
       }
     }
     .faq {
+      padding: 25px;
       margin: 25px 0;
+      h1 {
+        text-align: left;
+      }
     }
   }
   .mobile {
     display: none;
   }
-  .desk {
+  .desk,  #box {
     display: block;
   }
   #box {
-    @extend .desk;
     position: absolute;
     width: 150px;
     height: 150px;

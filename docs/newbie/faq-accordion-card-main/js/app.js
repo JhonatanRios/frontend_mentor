@@ -4,7 +4,7 @@ const box = document.getElementById('box');
 
 function boxMoved() {
   box.style.left= '-80px';
-  box.style.bottom= '110px';
+  box.style.bottom= '120px';
 }
 
 function boxReset() {
