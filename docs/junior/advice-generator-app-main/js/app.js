@@ -1,18 +1,32 @@
 const apiAdvice = 'https://api.adviceslip.com/advice';
-const adviceId = document.getElementById('adviceId');
-const advice = document.getElementById('advice');
-const btnAdvice = document.getElementById('submit')
+let lastAdvice;
+let adviceId = document.getElementById('adviceId');
+let advice = document.getElementById('advice');
+let btnAdvice = document.getElementById('submit');
 
 function conectarAPI(urlAPI) {
+  // Desactivamos el botón
+  btnAdvice.disabled = true;
+  
   fetch(urlAPI)
-  .then(response => response.json())
+  .then(res => res.json())
   .then(data => {
-    // Aquí puedes trabajar con los datos recibidos
-    conectarInfo(data.slip);
+    if (lastAdvice != data.slip.advice) {
+      conectarInfo(data.slip);
+      lastAdvice = data.slip.advice;
+    } else {
+      //console.log('Este consejo ya se mostró antes');
+      conectarAPI(urlAPI);
+    }
+    // Reactivamos el botón
+    btnAdvice.disabled = false;
   })
-  .catch(error => {
+  .catch(err => {
     // Aquí puedes manejar el error
-    console.error(error);
+    console.error(err);
+    
+    // Reactivamos el botón en caso de error
+    btnAdvice.disabled = false;
   });
 }
 
@@ -23,6 +37,4 @@ function conectarInfo(data) {
 
 conectarAPI(apiAdvice);
 
-btnAdvice.addEventListener('click', () => {
-  conectarAPI(apiAdvice);
-});
+btnAdvice.addEventListener('click', () => conectarAPI(apiAdvice));
