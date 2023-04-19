@@ -50,6 +50,9 @@ nav {
     i {
       font-size: 25px;
     }
+    &:hover {
+      filter: brightness(90%);
+    }
   }
 }
 

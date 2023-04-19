@@ -46,6 +46,9 @@ nav {
     i {
       font-size: 25px;
     }
+    &:hover {
+      filter: brightness(90%);
+    }
   }
 }
 
@@ -245,7 +248,7 @@ p {
       gap: 0 10px;
       p {
         display: block;
-        margin: 3px 0 0;
+        margin: 0 0 2px;
       }
     }
   }
