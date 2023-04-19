@@ -19,5 +19,12 @@
     "nomProyecto": "FAQ accordion card",
     "thumbnail": "/frontend_mentor/newbie/faq-accordion-card-main/thumbnail.png",
     "url": "/frontend_mentor/newbie/faq-accordion-card-main"
+  },
+  {
+    "built": ["html", "css", "js", "api"],
+    "level": "junior",
+    "nomProyecto": "Advice generator app",
+    "thumbnail": "/frontend_mentor/junior/advice-generator-app-main/thumbnail.png",
+    "url": "/frontend_mentor/junior/advice-generator-app-main"
   }
 ]

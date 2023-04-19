@@ -38,6 +38,9 @@ nav a p {
 nav a i {
   font-size: 25px;
 }
+nav a:hover {
+  filter: brightness(90%);
+}
 
 .card {
   position: relative;
@@ -227,6 +230,6 @@ p {
   }
   nav a p {
     display: block;
-    margin: 3px 0 0;
+    margin: 0 0 2px;
   }
 }/*# sourceMappingURL=styles.css.map */
