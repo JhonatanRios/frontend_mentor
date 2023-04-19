@@ -30,6 +30,9 @@ nav {
 nav a p {
   display: none;
 }
+nav a i {
+  font-size: 25px;
+}
 
 .cont-wrap {
   width: 80%;
@@ -39,17 +42,17 @@ nav a p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
 }
 .cont-cards .card {
-  flex: 1 1 256px; /*  Stretching: */
-  flex: 0 1 256px; /*  No stretching: */
+  flex: 1 1 240px; /*  Stretching: */
+  flex: 0 1 240px; /*  No stretching: */
   border-radius: 20px;
   box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 .cont-cards .card img {
-  width: 256px;
+  width: 100%;
   height: auto;
 }
 .cont-cards .card .info {
@@ -143,6 +146,7 @@ nav a p {
   }
   nav a p {
     display: block;
+    margin: 3px 0 0;
   }
 }
 input + label {

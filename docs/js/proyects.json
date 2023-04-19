@@ -12,5 +12,12 @@
     "nomProyecto": "Interactive rating component",
     "thumbnail": "/frontend_mentor/newbie/interactive-rating-component-main/thumbnail.png",
     "url": "/frontend_mentor/newbie/interactive-rating-component-main"
+  },
+  {
+    "built": ["html", "css", "js"],
+    "level": "newbie",
+    "nomProyecto": "FAQ accordion card",
+    "thumbnail": "/frontend_mentor/newbie/faq-accordion-card-main/thumbnail.png",
+    "url": "/frontend_mentor/newbie/faq-accordion-card-main"
   }
 ]

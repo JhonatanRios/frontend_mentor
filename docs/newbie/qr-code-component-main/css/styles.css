@@ -25,11 +25,6 @@ a {
   text-decoration: none;
 }
 
-p {
-  font-size: 15px;
-  color: hsl(218, 44%, 22%);
-}
-
 body {
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -46,6 +41,9 @@ nav {
 }
 nav a p {
   display: none;
+}
+nav a i {
+  font-size: 25px;
 }
 
 .card {
@@ -71,6 +69,11 @@ nav a p {
   display: grid;
 }
 
+p {
+  font-size: 15px;
+  color: hsl(218, 44%, 22%);
+}
+
 .mb--15 {
   margin: 0 0 15px;
 }
@@ -92,5 +95,6 @@ nav a p {
   }
   nav a p {
     display: block;
+    margin: 3px 0 0;
   }
 }/*# sourceMappingURL=styles.css.map */
