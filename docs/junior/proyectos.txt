@@ -1,7 +1,0 @@
-https://www.frontendmentor.io/challenges/age-calculator-app-dF9DFFpj-Q
-https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX
-https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw
-https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw
-https://www.frontendmentor.io/challenges/interactive-pricing-component-t0m8PIyY8
-https://www.frontendmentor.io/challenges/project-tracking-intro-component-5d289097500fcb331a67d80e
-https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db
