@@ -119,6 +119,10 @@ input:checked + label {
   color: hsl(25, 97%, 53%);
 }
 
+#submit:disabled {
+  opacity: 0.5;
+}
+
 .d-grid {
   display: grid;
 }
