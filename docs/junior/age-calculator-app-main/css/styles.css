@@ -14,6 +14,10 @@
 body {
   min-height: 100vh;
   background: hsl(0, 0%, 86%);
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
 }
 
 img {
@@ -48,7 +52,6 @@ nav a:hover {
   place-items: center;
   border-radius: 20px 20px 100px 20px;
   background: hsl(0, 0%, 100%);
-  margin: 15px auto;
   font-weight: 800;
   padding: 25px;
 }
@@ -179,7 +182,7 @@ p {
 @media (min-width: 375px) {
   .card {
     width: 450px;
-    margin: 25px auto;
+    margin: 25px 0;
   }
   #date .group .groupdate {
     width: 100px;
@@ -194,7 +197,6 @@ p {
 @media (min-width: 1024px) {
   .card {
     width: 600px;
-    margin: 25px auto;
   }
   nav a {
     grid-template-columns: auto auto;

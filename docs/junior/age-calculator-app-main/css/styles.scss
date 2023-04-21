@@ -23,6 +23,10 @@ $off-black: hsl(0, 0%, 8%);
 body {
   min-height: 100vh;
   background: $light-gray;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
 }
 
 img {
@@ -58,7 +62,6 @@ nav {
   place-items: center;
   border-radius: 20px 20px 100px 20px;
   background: $white;
-  margin: 15px auto;
   font-weight: 800;
   padding: 25px;
   img {
@@ -194,7 +197,7 @@ p {
 @media (min-width: 375px) {
   .card {
     width: 450px;
-    margin: 25px auto;
+    margin: 25px 0;
   }
   #date {
     .group {
@@ -218,7 +221,6 @@ p {
 @media (min-width: 1024px) {
   .card {
     width: 600px;
-    margin: 25px auto;
   }
   nav {
     a {

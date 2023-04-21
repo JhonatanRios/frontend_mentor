@@ -13,6 +13,9 @@
 
 body {
   min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  place-items: center;
   background: linear-gradient(180deg, hsl(273, 75%, 66%) 0, hsl(240, 73%, 65%) 100%) no-repeat;
 }
 
@@ -179,7 +182,7 @@ p {
     width: 800px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    margin: 25px auto;
+    margin: 25px 0;
   }
   .card::after {
     width: 50%;

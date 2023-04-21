@@ -19,7 +19,10 @@ $dark-blue: hsl(218, 23%, 16%);
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  place-items: center;
   background: $dark-blue;
 }
 
@@ -57,7 +60,7 @@ nav {
   gap: 15px 0;
   border-radius: 20px;
   background: $dark-grayish-blue;
-  margin: 15px auto;
+  margin: 0 0 25px;
   font-weight: 800;
   img {
     width: 100%;
@@ -163,7 +166,7 @@ p {
 @media (min-width: 375px) {
   .card {
     width: 350px;
-    margin: 25px auto;
+    margin: 25px 0;
   }
 }
 

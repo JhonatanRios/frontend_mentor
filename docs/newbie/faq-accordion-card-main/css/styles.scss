@@ -22,6 +22,9 @@ $dark-grayish-blue: hsl(240, 6%, 90%);
 
 body {
   min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  place-items: center;
   background: linear-gradient(180deg, $soft-violet 0, $soft-blue 100%) no-repeat;
 }
 
@@ -196,7 +199,7 @@ p {
     width: 800px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    margin: 25px auto;
+    margin: 25px 0;
     &::after {
       width: 50%;
       height: 130%;
