@@ -88,13 +88,12 @@ function validarFecha(dia, mes, anio) {
   return esFechaValida;
 }
 
-// Agregar evento click al botón "submit"
-btnSubmit.addEventListener('click', function(event) {
+function procesarBtn(event) {
   event.preventDefault();
-
+  
   // Obtener valores de los campos de entrada de fecha
   const [day, month, year] = [dayInput.value, monthInput.value, yearInput.value].map(Number);
-
+  
   // Verificar si ya hay mensajes de error en la página
   const errores = document.querySelectorAll('.errMsg');
   
@@ -105,20 +104,20 @@ btnSubmit.addEventListener('click', function(event) {
     const errorLabels = document.querySelectorAll('.errLabel');
     errorLabels.forEach(label => label.classList.remove('errLabel'));
   }
-
+  
   // Verificar si los campos están vacíos
   if (!validarCamposVacios(day, month, year)) {
     return;
   }
-
+  
   // Verificar si los campos son válidos
   if (!validarFecha(day, month, year)) {
     return;
   }
-
+  
   // Calcular edad
   const edad = calcularEdad(day, month, year);
-
+  
   // Actualizar valores en la página
   if (yearResult) {
     yearResult.textContent = `${edad.anios}`;
@@ -129,4 +128,7 @@ btnSubmit.addEventListener('click', function(event) {
   if (dayResult) {
     dayResult.textContent = `${edad.dias}`;
   }
-});
+}
+
+// Agregar evento click al botón "submit"
+btnSubmit.addEventListener('click', procesarBtn);
