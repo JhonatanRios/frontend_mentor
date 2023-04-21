@@ -26,5 +26,12 @@
     "nomProyecto": "Advice generator app",
     "thumbnail": "/frontend_mentor/junior/advice-generator-app-main/thumbnail.png",
     "url": "/frontend_mentor/junior/advice-generator-app-main"
+  },
+  {
+    "built": ["html", "css", "js"],
+    "level": "junior",
+    "nomProyecto": "Age calculator app",
+    "thumbnail": "/frontend_mentor/junior/age-calculator-app-main/thumbnail.png",
+    "url": "/frontend_mentor/junior/age-calculator-app-main"
   }
 ]
