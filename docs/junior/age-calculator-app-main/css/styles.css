@@ -46,7 +46,6 @@ nav a:hover {
   position: relative;
   width: 90%;
   place-items: center;
-  gap: 15px 0;
   border-radius: 20px 20px 100px 20px;
   background: hsl(0, 0%, 100%);
   margin: 15px auto;
@@ -60,22 +59,48 @@ nav a:hover {
 
 #date {
   width: 100%;
+  gap: 10px 0;
+}
+#date .group {
+  width: -moz-fit-content;
+  width: fit-content;
   grid-template-columns: repeat(3, 1fr);
   gap: 0 20px;
 }
-#date .groupdate label {
+#date .group .groupdate {
+  width: 70px;
+}
+#date .group .groupdate label {
   font-size: 10px;
   color: hsl(0, 1%, 44%);
 }
-#date .groupdate input {
+#date .group .groupdate input {
   width: 100%;
   border-radius: 5px;
   padding: 8px;
   border: 1px solid hsl(0, 0%, 86%);
+  margin: 0 0 5px;
 }
-#date .groupdate input:focus, #date .groupdate input:focus-visible {
+#date .group .groupdate input:focus, #date .group .groupdate input:focus-visible {
   outline: none;
   border: 1px solid hsl(259, 100%, 65%);
+}
+#date .group .groupdate input::-moz-placeholder {
+  opacity: 0.8;
+}
+#date .group .groupdate input::placeholder {
+  opacity: 0.8;
+}
+#date .group .groupdate .errLabel {
+  color: hsl(0, 100%, 67%);
+}
+#date .group .groupdate .errInput {
+  outline: none;
+  border: 1px solid hsl(0, 100%, 67%);
+}
+#date .group .groupdate .errMsg {
+  font-size: 8px;
+  color: hsl(0, 100%, 67%);
 }
 
 .cont-btn {
@@ -110,6 +135,17 @@ nav a:hover {
   background: hsl(0, 0%, 86%);
 }
 
+#result {
+  width: 100%;
+}
+#result p {
+  font-size: 2.5em;
+  line-height: 1.2;
+}
+#result p span {
+  color: hsl(259, 100%, 65%);
+}
+
 .d-grid {
   display: grid;
 }
@@ -122,6 +158,9 @@ p {
   font-size: 12px;
 }
 
+.m--0 {
+  margin: 0;
+}
 .mb--15 {
   margin: 0 0 15px;
 }
@@ -142,8 +181,14 @@ p {
     width: 450px;
     margin: 25px auto;
   }
+  #date .group .groupdate {
+    width: 100px;
+  }
   .cont-btn {
     place-items: center flex-end;
+  }
+  #result p {
+    font-size: 3em;
   }
 }
 @media (min-width: 1024px) {

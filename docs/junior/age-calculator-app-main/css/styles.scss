@@ -56,7 +56,6 @@ nav {
   position: relative;
   width: 90%;
   place-items: center;
-  gap: 15px 0;
   border-radius: 20px 20px 100px 20px;
   background: $white;
   margin: 15px auto;
@@ -70,21 +69,43 @@ nav {
 
 #date {
   width: 100%;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0 20px;
-  .groupdate {
-    label {
-      font-size: 10px;
-      color: $smokey-gray;
-    }
-    input {
-      width: 100%;
-      border-radius: 5px;
-      padding: 8px;
-      border: 1px solid $light-gray;
-      &:focus, &:focus-visible {
-        outline: none;
-        border: 1px solid $purple;
+  gap: 10px 0;
+  .group {
+    width: fit-content;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 20px;
+    .groupdate {
+      width: 70px;
+      label {
+        font-size: 10px;
+        color: $smokey-gray;
+      }
+      input {
+        width: 100%;
+        border-radius: 5px;
+        padding: 8px;
+        border: 1px solid $light-gray;
+        margin: 0 0 5px;
+        &:focus, &:focus-visible {
+          outline: none;
+          border: 1px solid $purple;
+        }
+        &::placeholder {
+          opacity: .8;
+        }
+      }
+      .err {
+        &Label {
+          color: $light-red;
+        }
+        &Input {
+          outline: none;
+          border: 1px solid $light-red;
+        }
+        &Msg {
+          font-size: 8px;
+          color: $light-red;
+        }
       }
     }
   }
@@ -124,6 +145,17 @@ nav {
   }
 }
 
+#result {
+  width: 100%;
+  p {
+    font-size: 2.5em;
+    line-height: 1.2;
+    span {
+      color: $purple;
+    }
+  }
+}
+
 .d-grid {
   display: grid;
 }
@@ -137,8 +169,13 @@ p {
   //color: $dark-blue;
 }
 
-.mb--15 {
-  margin: 0 0 15px;
+.m {
+  &--0 {
+    margin: 0;
+  }
+  &b--15 {
+    margin: 0 0 15px;
+  }
 }
 
 .p--15 {
@@ -159,9 +196,21 @@ p {
     width: 450px;
     margin: 25px auto;
   }
+  #date {
+    .group {
+      .groupdate {
+        width: 100px;
+      }
+    }
+  }
   .cont {
     &-btn {
       place-items: center flex-end;
+    }
+  }
+  #result {
+    p {
+      font-size: 3em;
     }
   }
 }
