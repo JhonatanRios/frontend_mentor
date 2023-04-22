@@ -33,5 +33,12 @@
     "nomProyecto": "Age calculator app",
     "thumbnail": "/frontend_mentor/junior/age-calculator-app-main/thumbnail.png",
     "url": "/frontend_mentor/junior/age-calculator-app-main"
+  },
+  {
+    "built": ["html", "css", "js"],
+    "level": "junior",
+    "nomProyecto": "Interactive card details form",
+    "thumbnail": "/frontend_mentor/junior/interactive-card-details-form-main/thumbnail.png",
+    "url": "/frontend_mentor/junior/interactive-card-details-form-main"
   }
 ]
