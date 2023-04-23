@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap");
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -7,13 +8,29 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 body {
   min-height: 100vh;
   display: grid;
   place-items: center;
+  grid-template-rows: auto 1fr auto;
+  background: hsl(270, 3%, 87%);
+}
+body * {
+  z-index: 2;
+}
+body::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 350px;
+  background: url("../images/bg-main-mobile.png") no-repeat center;
+  background-size: cover;
+  top: 0;
+  z-index: 1;
 }
 
 img {
@@ -42,6 +59,111 @@ nav a:hover {
   filter: brightness(90%);
 }
 
+.card {
+  width: 80%;
+  grid-template-columns: 50% 50%;
+}
+.card #tarjetas {
+  width: 100%;
+}
+.card #tarjetas .tarjeta {
+  width: 80%;
+  position: relative;
+}
+.card #tarjetas .tarjeta .info {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  gap: 10px 0;
+  font-weight: 500;
+}
+.card #tarjetas .tarjeta img {
+  width: 100%;
+  height: auto;
+}
+.card #tarjetas .tarjeta#front {
+  margin: 0 auto 0 0;
+}
+.card #tarjetas .tarjeta#front .info div {
+  justify-content: space-between;
+}
+.card #tarjetas .tarjeta#front .info div p {
+  font-size: 12px;
+  font-weight: 300;
+}
+.card #tarjetas .tarjeta#front::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 25%;
+  height: 25%;
+  background: url("../images/card-logo.svg") no-repeat center;
+  background-size: contain;
+  top: 15px;
+  left: 15px;
+}
+.card #tarjetas .tarjeta#back {
+  margin: 0 0 0 auto;
+}
+.card #tarjetas .tarjeta#back p {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  right: 50px;
+  top: 96px;
+}
+.card #datos {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px 0;
+}
+
+.cont-group {
+  justify-content: space-between;
+  gap: 0 15px;
+}
+
+.group {
+  flex-direction: column;
+  gap: 5px 0;
+}
+.group label {
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.group input {
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px;
+  border: 1px solid hsl(279, 6%, 55%);
+  margin: 0 0 5px;
+}
+.group input:focus, .group input:focus-visible {
+  outline: none;
+  border: 1px solid;
+  -o-border-image: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+     border-image: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+}
+.group input::-moz-placeholder {
+  opacity: 0.8;
+}
+.group input::placeholder {
+  opacity: 0.8;
+}
+
+#date {
+  gap: 0 10px;
+}
+#date input {
+  width: 100px;
+}
+
+.d-flex {
+  display: flex;
+}
 .d-grid {
   display: grid;
 }
@@ -51,7 +173,7 @@ nav a:hover {
 }
 
 p {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .m--0 {
@@ -65,10 +187,35 @@ p {
   padding: 15px;
 }
 
+.txt--darkgray {
+  color: hsl(279, 6%, 55%);
+}
+.txt--darkviolet {
+  color: hsl(278, 68%, 11%);
+}
+.txt--lightviolet {
+  color: hsl(270, 3%, 87%);
+}
+.txt--white {
+  color: hsl(0, 0%, 100%);
+}
+
 @media (min-width: 375px) {
-  .card {
-    width: 450px;
-    margin: 25px auto;
+  body::after {
+    height: 100%;
+    width: 30%;
+    background: url(../images/bg-main-desktop.png) no-repeat center;
+    background-size: cover;
+    top: 0;
+    left: 0;
+  }
+  .card #tarjetas {
+    width: 350px;
+    gap: 20px 0;
+  }
+  .card #tarjetas .tarjeta#back p {
+    right: 35px;
+    top: 65px;
   }
 }
 @media (min-width: 1024px) {
@@ -79,5 +226,12 @@ p {
   nav a p {
     display: block;
     margin: 0 0 2px;
+  }
+  .card #tarjetas {
+    width: 500px;
+  }
+  .card #tarjetas .tarjeta#back p {
+    right: 50px;
+    top: 96px;
   }
 }/*# sourceMappingURL=styles.css.map */

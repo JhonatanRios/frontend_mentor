@@ -14,35 +14,62 @@
 </head>
 <body>
   <nav class="p--15">
-    <a href="/frontend_mentor" class="txt--black d-grid center"><p>Volver a los proyectos</p> <i class="fa-solid fa-circle-chevron-left"></i></a>
+    <a href="/frontend_mentor" class="txt--darkgray d-grid center"><p>Volver a los proyectos</p> <i class="fa-solid fa-circle-chevron-left"></i></a>
   </nav>
 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
+  <div class="d-grid card">
+    <div class="d-grid" id="tarjetas">
+      <div class="tarjeta" id="front">
+        <img src="./images/bg-card-front.png" alt="front">
+        <div class="d-grid info p--15" id="infoFront">
+          <p class="txt--white" id="numberFront">0000 0000 0000 0000</p>
+          <div class="d-flex">
+            <p class="txt--white" id="nameFront">Jane Appleseed</p>
+            <p class="txt--white" id="dateFront">00/00</p>
+          </div>
+        </div>
+      </div>
+      <div class="tarjeta" id="back">
+        <img src="./images/bg-card-back.png" alt="back">
+        <p class="txt--white info" id="infoBack">000</p>
+      </div>
+    </div>
+    <form class="d-flex" id="datos">
+      <div class="d-flex group">
+        <label class="txt--darkviolet" for="cardholder-name">Cardholder Name:</label>
+        <input type="text" id="cardholder-name" name="cardholder-name" placeholder="e.g. Jane Appleseed">
+      </div>
+      <div class="d-flex group">
+        <label class="txt--darkviolet" for="cardNumber">Card Number:</label>
+        <input type="text" id="cardNumber" name="cardNumber" placeholder="e.g. 1234 5678 9123 0000">
+      </div>
+      <div class="d-flex cont-group">
+        <div class="d-grid group">
+          <label class="txt--darkviolet" for="expiry-date">Exp. Date (MM/YY):</label>
+          <div class="d-flex" id="date">
+            <input type="number" id="expiryDateDay" name="expiryDate" placeholder="MM">
+            <input type="number" id="expiryDateMonth" name="expiryDate" placeholder="YY">
+          </div>
+        </div>
+        <div class="d-flex group">
+          <label class="txt--darkviolet" for="cvc">CVC:</label>
+          <input type="text" id="cvv" name="cvv">
+        </div>
+      </div>
+    
+      <button type="submit">Enviar</button>
+    </form>
+    <div>
+    </div>
+  </div>
 
   <!-- Completed state start -->
 
   Thank you!
   We've added your card details
   Continue
-  <div class="attribution txt--black p--15"> Challenge by <a class="txt--lightred" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a class="txt--lightred" href="https://github.com/JhonatanRios">jriosdesigner</a>.</div>
+  <div class="attribution txt--white p--15"> Challenge by <a class="txt--darkgray" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a class="txt--darkgray" href="https://github.com/JhonatanRios">jriosdesigner</a>.</div>
+
+  <script src="./js/app.js"></script>
 </body>
 </html>

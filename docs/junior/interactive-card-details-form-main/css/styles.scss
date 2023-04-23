@@ -1,3 +1,12 @@
+$linear-gradient: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+$red: hsl(0, 100%, 66%);
+$white: hsl(0, 0%, 100%);
+$light-grayish-violet: hsl(270, 3%, 87%);
+$dark-grayish-violet: hsl(279, 6%, 55%);
+$very-dark-violet: hsl(278, 68%, 11%);
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap');
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -7,14 +16,29 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  //background: $light-gray;
+  grid-template-rows: auto 1fr auto;
+  background: $light-grayish-violet;
+  * {
+    z-index: 2;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 350px;
+    background: url('../images/bg-main-mobile.png') no-repeat center;
+    background-size: cover;
+    top: 0;
+    z-index: 1;
+  }
 }
 
 img {
@@ -44,8 +68,110 @@ nav {
   }
 }
 
-.d-grid {
-  display: grid;
+.card {
+  width: 80%;
+  grid-template-columns: 50% 50%;
+  #tarjetas {
+    width: 100%;
+    .tarjeta {
+      width: 80%;
+      position: relative;
+      .info {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        gap: 10px 0;
+        font-weight: 500;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+      &#front {
+        margin: 0 auto 0 0;
+        .info {
+          div {
+            justify-content: space-between;
+            p {
+              font-size: 12px;
+              font-weight: 300;
+            }
+          }
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          display: block;
+          width: calc(100% / 4);
+          height: calc(100% / 4);
+          background: url('../images/card-logo.svg') no-repeat center;
+          background-size: contain;
+          top: 15px;
+          left: 15px;
+        }
+      }
+      &#back {
+        margin: 0 0 0 auto;
+        p {
+          width: fit-content;
+          height: fit-content;
+          right: 50px;
+          top: 96px;
+        }
+      }
+    }
+  }
+  #datos {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px 0;
+  }
+}
+
+.cont-group {
+  justify-content: space-between;
+  gap: 0 15px;
+}
+
+.group {
+  flex-direction: column;
+  gap: 5px 0;
+  label {
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+  input {
+    width: 100%;
+    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid $dark-grayish-violet;
+    margin: 0 0 5px;
+    &:focus, &:focus-visible {
+      outline: none;
+      border: 1px solid;
+      border-image: $linear-gradient;
+    }
+    &::placeholder {
+      opacity: .8;
+    }
+  }
+}
+#date {
+  gap: 0 10px;
+  input {
+    width: 100px;
+  }
+}
+
+.d {
+  &-flex {
+    display: flex;
+  }
+  &-grid {
+    display: grid;
+  }
 }
 
 .center {
@@ -53,7 +179,7 @@ nav {
 }
 
 p {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .m {
@@ -69,10 +195,45 @@ p {
   padding: 15px;
 }
 
+.txt {
+  &--darkgray {
+    color: $dark-grayish-violet;
+  }
+  &--darkviolet {
+    color: $very-dark-violet;
+  }
+  &--lightviolet {
+    color: $light-grayish-violet;
+  }
+  &--white {
+    color: $white;
+  }
+}
+
 @media (min-width: 375px) {
+  body {
+    &::after {
+      height: 100%;
+      width: 30%;
+      background: url(../images/bg-main-desktop.png) no-repeat center;
+      background-size: cover;
+      top: 0;
+      left: 0;
+    }
+  }
   .card {
-    width: 450px;
-    margin: 25px auto;
+    #tarjetas {
+      width: 350px;
+      gap: 20px 0;
+      .tarjeta {
+        &#back {
+          p {
+            right: 35px;
+            top: 65px;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -84,6 +245,19 @@ p {
       p {
         display: block;
         margin: 0 0 2px;
+      }
+    }
+  }
+  .card {
+    #tarjetas {
+      width: 500px;
+      .tarjeta {
+        &#back {
+          p {
+            right: 50px;
+            top: 96px;
+          }
+        }
       }
     }
   }
