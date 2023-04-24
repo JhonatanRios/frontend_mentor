@@ -1,4 +1,4 @@
-$linear-gradient: linear-gradient(to right, hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+$linear-gradient: hsl(249, 99%, 64%), hsl(278, 94%, 30%);
 $red: hsl(0, 100%, 66%);
 $white: hsl(0, 0%, 100%);
 $light-grayish-violet: hsl(270, 3%, 87%);
@@ -24,7 +24,7 @@ body {
   display: grid;
   place-items: center;
   grid-template-rows: auto 1fr auto;
-  background: $light-grayish-violet;
+  background: $white;
   * {
     z-index: 2;
   }
@@ -71,6 +71,7 @@ nav {
 .card {
   width: 80%;
   grid-template-columns: 50% 50%;
+  gap: 15px;
   #tarjetas {
     width: 100%;
     .tarjeta {
@@ -145,24 +146,40 @@ nav {
   input {
     width: 100%;
     border-radius: 5px;
-    padding: 8px;
+    padding: 15px;
     border: 1px solid $dark-grayish-violet;
     margin: 0 0 5px;
+    color: $very-dark-violet;
     &:focus, &:focus-visible {
-      outline: none;
-      border: 1px solid;
-      border-image: $linear-gradient;
+      border: 2px solid;
+      border-image: linear-gradient($linear-gradient) 1;
+      outline: 10px;
+      border-radius: 10px;
     }
     &::placeholder {
       opacity: .8;
     }
   }
+  .err {
+    &Label {
+      color: $red;
+    }
+  }
 }
+
 #date {
   gap: 0 10px;
   input {
     width: 100px;
   }
+}
+
+#submit {
+  width: 100%;
+  padding: 15px 25px;
+  background: $very-dark-violet;
+  color: $white;
+  border-radius: 10px;
 }
 
 .d {
@@ -215,7 +232,7 @@ p {
     &::after {
       height: 100%;
       width: 30%;
-      background: url(../images/bg-main-desktop.png) no-repeat center;
+      background: url('../images/bg-main-desktop.png') no-repeat center;
       background-size: cover;
       top: 0;
       left: 0;

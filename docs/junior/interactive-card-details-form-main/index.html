@@ -36,19 +36,19 @@
     </div>
     <form class="d-flex" id="datos">
       <div class="d-flex group">
-        <label class="txt--darkviolet" for="cardholder-name">Cardholder Name:</label>
-        <input type="text" id="cardholder-name" name="cardholder-name" placeholder="e.g. Jane Appleseed">
+        <label class="txt--darkviolet" for="cardName">Cardholder Name:</label>
+        <input type="text" id="cardName" name="cardName" placeholder="e.g. Jane Appleseed">
       </div>
       <div class="d-flex group">
         <label class="txt--darkviolet" for="cardNumber">Card Number:</label>
-        <input type="text" id="cardNumber" name="cardNumber" placeholder="e.g. 1234 5678 9123 0000">
+        <input type="number" id="cardNumber" name="cardNumber" placeholder="e.g. 1234 5678 9123 0000">
       </div>
       <div class="d-flex cont-group">
         <div class="d-grid group">
           <label class="txt--darkviolet" for="expiry-date">Exp. Date (MM/YY):</label>
           <div class="d-flex" id="date">
-            <input type="number" id="expiryDateDay" name="expiryDate" placeholder="MM">
-            <input type="number" id="expiryDateMonth" name="expiryDate" placeholder="YY">
+            <input type="number" id="expiryDateMonth" name="expiryDate" placeholder="MM">
+            <input type="number" id="expiryDateYear" name="expiryDate" placeholder="YY">
           </div>
         </div>
         <div class="d-flex group">
@@ -57,7 +57,7 @@
         </div>
       </div>
     
-      <button type="submit">Enviar</button>
+      <button id="submit" type="submit">Confirm</button>
     </form>
     <div>
     </div>
