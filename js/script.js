@@ -19,38 +19,34 @@ async function readJson(filename) {
 }
 
 /*
-  Resive por parametro una objeto + unstring que seta el nombre del atributo a selecccionar
+  Resive por parametro una objeto + un string que setea el nombre del atributo a selecccionar
     - Crea contenedor con id para los estilos
     - Crea input + label para una opcion general
     - Recorre el objeto buscando el atributo ambos entregados por parametro y va generando input + label cada que encuentra 1 diferente
     - Retorna un div+id que contiene los inputs + labels
 */
 function createFilters(data, attributeName) {
-  const attributeValues = new Set(data.map((item) => item[attributeName]));
+  const attributeValues = new Set(data.map(item => item[attributeName]));
   const radioGroup = document.createElement('div');
   radioGroup.id = 'items';
-  const labelAll = document.createElement('label');
-  const inputAll = document.createElement('input');
-  inputAll.type = 'radio';
-  inputAll.name = attributeName;
-  inputAll.value = 'all';
-  inputAll.checked = true;
-  inputAll.id = 'all';
-  labelAll.htmlFor = 'all';
-  labelAll.textContent = 'All';
-  radioGroup.appendChild(inputAll);
-  radioGroup.appendChild(labelAll);
-  attributeValues.forEach((value) => {
-    const label = document.createElement('label');
-    const input = document.createElement('input');
-    input.type = 'radio';
-    input.name = attributeName;
-    input.id = value;
-    label.htmlFor = value;
-    label.textContent = value;
-    radioGroup.appendChild(input);
-    radioGroup.appendChild(label);
+
+  let html = `
+    <label>
+      <input type="radio" name="${attributeName}" value="all" checked id="all">
+      All
+    </label>
+  `;
+
+  attributeValues.forEach(value => {
+    html += `
+      <label>
+        <input type="radio" name="${attributeName}" id="${value}">
+        ${value}
+      </label>
+    `;
   });
+
+  radioGroup.innerHTML = html;
   return radioGroup;
 }
 
@@ -116,47 +112,26 @@ function createCards(item) {
   card.classList.add('card');
   card.href = item.url;
 
-  const info = document.createElement('div');
-  info.classList.add('info');
+  const levelColor = (() => {
+    if (item.level === "newbie") return "#6abecd";
+    if (item.level === "junior") return "#aad742";
+    if (item.level === "intermediate") return "#f1b604";
+    if (item.level === "advanced") return "#f48925";
+    if (item.level === "guru") return "#ed2c49";
+  })();
 
-  const img = document.createElement('img');
-  img.src = item.thumbnail;
-  img.alt = item.nomProyecto;
+  const info = `
+    <img src="${item.thumbnail}" alt="${item.nomProyecto}">
+    <div class="info">
+      <h2>${item.nomProyecto}</h2>
+      <p>${item.built.join(', ')}</p>
+      <p style="color: ${levelColor}">${item.level}</p>
+    </div>
+  `;
 
-  const title = document.createElement('h2');
-  title.textContent = item.nomProyecto;
-
-  const level = document.createElement('p');
-  level.textContent = item.level;
-  if (item.level === "newbie") {
-    level.style.color = "#6abecd";
-  } else if (item.level === "junior") {
-    level.style.color = "#aad742";
-  } else if (item.level === "intermediate") {
-    level.style.color = "#f1b604";
-  } else if (item.level === "advanced") {
-    level.style.color = "#f48925";
-  } else if (item.level === "guru") {
-    level.style.color = "#ed2c49";
-  }
-
-  const builtWith = document.createElement('p');
-  builtWith.textContent = `${item.built.join(', ')}`;
-
-  card.appendChild(img);
-  info.appendChild(title);
-  info.appendChild(builtWith);
-  info.appendChild(level);
-  card.appendChild(info);
-
+  card.innerHTML = info;
   return card;
 }
-
-
-
-
-
-
 
 initFliterProyects();
 filterCards();
