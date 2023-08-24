@@ -23,11 +23,11 @@ Users should be able to:
 - See the "Thank you" card state after submitting a rating
 
 ### Screenshot
-![](https://github.com/JhonatanRios/frontend_mentor/blob/main/docs/newbie/interactive-rating-component-main/images/screencapture-solution.png)
+![](https://github.com/JhonatanRios/frontend_mentor/blob/main/newbie/interactive-rating-component-main/images/screencapture-solution.png)
 
 ### Links
-- Solution URL: [github.com/JhonatanRios/frontend_mentor/interactive-rating-component-main](https://github.com/JhonatanRios/frontend_mentor/tree/main/docs/newbie/interactive-rating-component-main)
-- Live Site URL: [frontend_mentor/newbie/interactive-rating-component-main](https://jhonatanrios.github.io/frontend_mentor/newbie/interactive-rating-component-main/)
+- Solution URL: [github.com/JhonatanRios/frontend_mentor/interactive-rating-component-main](https://github.com/JhonatanRios/frontend_mentor/tree/main/newbie/interactive-rating-component-main)
+- Live Site URL: [challenges-frontmentor.netlify.app/newbieinteractive-rating-component-main](https://challenges-frontmentor.netlify.app/newbie/interactive-rating-component-main/)
 
 
 

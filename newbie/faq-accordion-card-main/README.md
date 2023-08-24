@@ -22,11 +22,11 @@ Users should be able to:
 - Hide/Show the answer to a question when the question is clicked
 
 ### Screenshot
-![](https://github.com/JhonatanRios/frontend_mentor/blob/main/docs/newbie/faq-accordion-card-main/images/screencapture-solution.png)
+![](https://github.com/JhonatanRios/frontend_mentor/blob/main/newbie/faq-accordion-card-main/images/screencapture-solution.png)
 
 ### Links
-- Solution URL: [github.com/JhonatanRios/frontend_mentor/faq-accordion-card-main](https://github.com/JhonatanRios/frontend_mentor/tree/main/docs/newbie/faq-accordion-card-main)
-- Live Site URL: [frontend_mentor/newbie/faq-accordion-card-main](https://jhonatanrios.github.io/frontend_mentor/newbie/faq-accordion-card-main/)
+- Solution URL: [github.com/JhonatanRios/frontend_mentor/faq-accordion-card-main](https://github.com/JhonatanRios/frontend_mentor/tree/main/newbie/faq-accordion-card-main)
+- Live Site URL: [challenges-frontmentor.netlify.app/newbiefaq-accordion-card-main](https://challenges-frontmentor.netlify.app/newbie/faq-accordion-card-main/)
 
 
 

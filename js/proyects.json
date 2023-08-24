@@ -1,0 +1,44 @@
+[
+  {
+    "built": ["html", "css"],
+    "level": "newbie",
+    "nomProyecto": "QR code component",
+    "thumbnail": "../newbie/qr-code-component-main/thumbnail.png",
+    "url": "../newbie/qr-code-component-main"
+  },
+  {
+    "built": ["html", "css", "js"],
+    "level": "newbie",
+    "nomProyecto": "Interactive rating component",
+    "thumbnail": "../newbie/interactive-rating-component-main/thumbnail.png",
+    "url": "../newbie/interactive-rating-component-main"
+  },
+  {
+    "built": ["html", "css", "js"],
+    "level": "newbie",
+    "nomProyecto": "FAQ accordion card",
+    "thumbnail": "../newbie/faq-accordion-card-main/thumbnail.png",
+    "url": "../newbie/faq-accordion-card-main"
+  },
+  {
+    "built": ["html", "css", "js", "api"],
+    "level": "junior",
+    "nomProyecto": "Advice generator app",
+    "thumbnail": "../junior/advice-generator-app-main/thumbnail.png",
+    "url": "../junior/advice-generator-app-main"
+  },
+  {
+    "built": ["html", "css", "js"],
+    "level": "junior",
+    "nomProyecto": "Age calculator app",
+    "thumbnail": "../junior/age-calculator-app-main/thumbnail.png",
+    "url": "../junior/age-calculator-app-main"
+  },
+  {
+    "built": ["html", "css", "js"],
+    "level": "junior",
+    "nomProyecto": "Interactive card details form",
+    "thumbnail": "../junior/interactive-card-details-form-main/thumbnail.png",
+    "url": "../junior/interactive-card-details-form-main"
+  }
+]

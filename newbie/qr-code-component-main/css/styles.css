@@ -72,6 +72,10 @@ nav a:hover {
   display: grid;
 }
 
+.center {
+  place-items: center;
+}
+
 p {
   font-size: 15px;
   color: hsl(218, 44%, 22%);
