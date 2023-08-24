@@ -79,6 +79,10 @@ nav {
   display: grid;
 }
 
+.center {
+  place-items: center;
+}
+
 p {
   font-size: 15px;
   color: $dark-blue;
