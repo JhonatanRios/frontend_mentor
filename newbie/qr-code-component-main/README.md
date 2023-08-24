@@ -15,11 +15,11 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ## Overview
 ### Screenshot
-![](https://github.com/JhonatanRios/frontend_mentor/blob/main/docs/newbie/qr-code-component-main/images/screencapture-solution.png)
+![](https://github.com/JhonatanRios/frontend_mentor/blob/main/newbie/qr-code-component-main/images/screencapture-solution.png)
 
 ### Links
-- Solution URL: [github.com/JhonatanRios/frontend_mentor/qr-code-component-main](https://github.com/JhonatanRios/frontend_mentor/tree/main/docs/newbie/qr-code-component-main)
-- Live Site URL: [frontend_mentor/newbie/qr-code-component-main](https://jhonatanrios.github.io/frontend_mentor/newbie/qr-code-component-main/)
+- Solution URL: [github.com/JhonatanRios/frontend_mentor/qr-code-component-main](https://github.com/JhonatanRios/frontend_mentor/tree/main/newbie/qr-code-component-main)
+- Live Site URL: [frontend_mentor/newbie/qr-code-component-main](https://challenges-frontmentor.netlify.app/newbie/qr-code-component-main/)
 
 
 

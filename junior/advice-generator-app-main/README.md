@@ -20,11 +20,11 @@ Users should be able to:
 - Generate a new piece of advice by clicking the dice icon
 
 ### Screenshot
-![](https://github.com/JhonatanRios/frontend_mentor/blob/main/docs/junior/advice-generator-app-main/images/screencapture-solution.png)
+![](https://github.com/JhonatanRios/frontend_mentor/blob/main/junior/advice-generator-app-main/images/screencapture-solution.png)
 
 ### Links
-- Solution URL: [github.com/JhonatanRios/frontend_mentor/advice-generator-app-main](https://github.com/JhonatanRios/frontend_mentor/tree/main/docs/junior/advice-generator-app-main)
-- Live Site URL: [frontend_mentor/junior/advice-generator-app-main](https://jhonatanrios.github.io/frontend_mentor/junior/advice-generator-app-main/)
+- Solution URL: [github.com/JhonatanRios/frontend_mentor/advice-generator-app-main](https://github.com/JhonatanRios/frontend_mentor/tree/main/junior/advice-generator-app-main)
+- Live Site URL: [frontend_mentor/junior/advice-generator-app-main](https://challenges-frontmentor.netlify.app/junior/advice-generator-app-main/)
 
 
 
