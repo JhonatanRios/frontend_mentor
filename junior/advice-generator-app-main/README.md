@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Links
 - Solution URL: [github.com/JhonatanRios/frontend_mentor/advice-generator-app-main](https://github.com/JhonatanRios/frontend_mentor/tree/main/junior/advice-generator-app-main)
-- Live Site URL: [frontend_mentor/junior/advice-generator-app-main](https://challenges-frontmentor.netlify.app/junior/advice-generator-app-main/)
+- Live Site URL: [challenges-frontmentor.netlify.app/junioradvice-generator-app-main](https://challenges-frontmentor.netlify.app/junior/advice-generator-app-main/)
 
 
 

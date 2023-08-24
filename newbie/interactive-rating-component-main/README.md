@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 - Solution URL: [github.com/JhonatanRios/frontend_mentor/interactive-rating-component-main](https://github.com/JhonatanRios/frontend_mentor/tree/main/newbie/interactive-rating-component-main)
-- Live Site URL: [frontend_mentor/newbie/interactive-rating-component-main](https://challenges-frontmentor.netlify.app/newbie/interactive-rating-component-main/)
+- Live Site URL: [challenges-frontmentor.netlify.app/newbieinteractive-rating-component-main](https://challenges-frontmentor.netlify.app/newbie/interactive-rating-component-main/)
 
 
 

@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 - Solution URL: [github.com/JhonatanRios/frontend_mentor/age-calculator-app-main](https://github.com/JhonatanRios/frontend_mentor/tree/main/junior/age-calculator-app-main)
-- Live Site URL: [frontend_mentor/junior/age-calculator-app-main](https://challenges-frontmentor.netlify.app/junior/age-calculator-app-main/)
+- Live Site URL: [challenges-frontmentor.netlify.app/juniorage-calculator-app-main](https://challenges-frontmentor.netlify.app/junior/age-calculator-app-main/)
 
 
 
