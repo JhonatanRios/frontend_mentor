@@ -31,18 +31,14 @@ function createFilters(data, attributeName) {
   radioGroup.id = 'items';
 
   let html = `
-    <label>
-      <input type="radio" name="${attributeName}" value="all" checked id="all">
-      All
-    </label>
+    <input type="radio" name="${attributeName}" value="all" checked id="all">
+    <label for="all">All</label>
   `;
 
   attributeValues.forEach(value => {
     html += `
-      <label>
-        <input type="radio" name="${attributeName}" id="${value}">
-        ${value}
-      </label>
+      <input type="radio" name="${attributeName}" id="${value}">
+      <label for="${value}">${value}</label>
     `;
   });
 
