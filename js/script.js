@@ -1,6 +1,6 @@
 const filtroLevels = document.getElementById('filtros');
 const cards = document.getElementById('cards');
-let jsonData = '';
+let jsonData = [];
 
 /*
   try: Lee archivo que se le pase por parametro y retorna un objeto
@@ -9,9 +9,7 @@ let jsonData = '';
 async function readJson(filename) {
   try {
     const response = await fetch(filename);
-    jsonData = await response.json();
-    //console.log(jsonData);
-    return jsonData;
+    return response.json();
   } catch (error) {
     console.error(error);
     throw new Error('No se pudo leer el archivo json.');
@@ -26,7 +24,7 @@ async function readJson(filename) {
     - Retorna un div+id que contiene los inputs + labels
 */
 function createFilters(data, attributeName) {
-  const attributeValues = new Set(data.map(item => item[attributeName]));
+  const attributeValues = [...new Set(data.map(item => item[attributeName]))];
   const radioGroup = document.createElement('div');
   radioGroup.id = 'items';
 
@@ -49,12 +47,12 @@ function createFilters(data, attributeName) {
 /*
   Usa las 2 funciones readJson(), createFilters()
 */
-async function initFliterProyects() {
+async function initFilterProjects() {
   try {
     jsonData = await readJson('js/proyects.json');
-    if (jsonData) {
-      filtroLevels.innerHTML = '';
+    if (jsonData.length > 0) {
       const radioGroup = createFilters(jsonData, 'level');
+      filtroLevels.innerHTML = '';
       filtroLevels.appendChild(radioGroup);
     } else {
       filtroLevels.textContent = 'No se pudo leer el archivo json.';
@@ -68,33 +66,31 @@ async function initFliterProyects() {
   Decide que trajetas cargar dependiendo que input esta checked
 */
 async function filterCards() {
-  jsonData = await readJson('js/proyects.json');
+  const radioButtons = document.querySelectorAll('input[name="level"]');
   
   // Agregar tarjetas al cargar la página
-  for (const item of jsonData) {
-    const card = createCards(item);
-    cards.appendChild(card);
+  function displayCards(data) {
+    cards.innerHTML = '';
+    for (const item of data) {
+      const card = createCard(item);
+      cards.appendChild(card);
+    }
   }
-
-  // Agregar event listeners a los botones de radio
-  const radioButtons = document.querySelectorAll('input[name="level"]');
+  
+  // Mostrar todas las tarjetas al inicio
+  displayCards(jsonData);
+  
+  // Agregar event listener a los botones de radio
   radioButtons.forEach(radio => {
     radio.addEventListener('change', () => {
       const selectedLevel = radio.id;
       console.log(selectedLevel);
-      cards.innerHTML = ''; // clear previous cards
       
       if (selectedLevel === 'all') {
-        for (const item of jsonData) {
-          const card = createCards(item);
-          cards.appendChild(card);
-        }
+        displayCards(jsonData);
       } else {
         const filteredData = jsonData.filter(item => item.level === selectedLevel);
-        for (const item of filteredData) {
-          const card = createCards(item);
-          cards.appendChild(card);
-        }
+        displayCards(filteredData);
       }
     });
   });
@@ -103,25 +99,25 @@ async function filterCards() {
 /*
   Crear tarjetas
 */
-function createCards(item) {
+function createCard(item) {
   const card = document.createElement('a');
   card.classList.add('card');
   card.href = item.url;
 
-  const levelColor = (() => {
-    if (item.level === "newbie") return "#6abecd";
-    if (item.level === "junior") return "#aad742";
-    if (item.level === "intermediate") return "#f1b604";
-    if (item.level === "advanced") return "#f48925";
-    if (item.level === "guru") return "#ed2c49";
-  })();
+  const levelColorMap = {
+    newbie: "#6abecd",
+    junior: "#aad742",
+    intermediate: "#f1b604",
+    advanced: "#f48925",
+    guru: "#ed2c49",
+  };
 
   const info = `
     <img src="${item.thumbnail}" alt="${item.nomProyecto}">
     <div class="info">
       <h2>${item.nomProyecto}</h2>
       <p>${item.built.join(', ')}</p>
-      <p style="color: ${levelColor}">${item.level}</p>
+      <p style="color: ${levelColorMap[item.level]}">${item.level}</p>
     </div>
   `;
 
@@ -129,5 +125,7 @@ function createCards(item) {
   return card;
 }
 
-initFliterProyects();
-filterCards();
+(async () => {
+  await initFilterProjects();
+  filterCards();
+})();
